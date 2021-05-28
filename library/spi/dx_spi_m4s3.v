@@ -94,9 +94,9 @@ wire miso_sdio;
 dx_iobuf #(
     .DATA_WIDTH(1)
 ) iobuf_spi_sdio (
+    .dio_i(mosi_m),
+    .dio_o(miso_sdio),
     .dio_t(sdio_en),
-    .dio_o(mosi_m),
-    .dio_i(miso_sdio),
     .dio_p(sdio_s)
 );
 
