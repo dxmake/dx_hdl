@@ -87,7 +87,7 @@ end
 localparam SPI_START_PRD = RST_PRD + 20;
 localparam SCLK_PRD_PRD = 2 * (SCLK_DIV+1); // frequency division ratio.
 localparam SPI_WORD_PRD = (SPI_WIDTH+1) * SCLK_PRD_PRD + 1; // transmit one word costs.
-localparam SPI_GAP_PRD = 0; // simulation setting, >=0, periods between two spi transmission.
+localparam SPI_GAP_PRD = 10; // simulation setting, >=0, periods between two spi transmission.
 localparam SPI_RPT_PRD = SPI_WORD_PRD + SPI_GAP_PRD;
 localparam SPI_WORD_NUM = 5; // simulation setting, how many words to send.
 

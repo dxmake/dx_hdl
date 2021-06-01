@@ -91,7 +91,7 @@ always @(negedge sclk or posedge sel_n) begin
 end
 
 wire miso_sdio;
-dx_iobuf #(
+xil_iobuf #(
     .DATA_WIDTH(1)
 ) iobuf_spi_sdio (
     .dio_i(mosi_m),
