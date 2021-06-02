@@ -24,6 +24,8 @@ project_1
 ```makefile
 export DX_HDL_DIR := /home/julongjian/Repository/dx_hdl
 export PROJECT_NAME := project_1
+export IGNORE_VERSION_CHECK := 1
+MODE := incr
 
 M_DEPS +=
 LIB_DEPS +=
@@ -36,9 +38,9 @@ include ${DX_HDL_DIR}/scripts/project/project_xilinx.mk
 ```tcl
 set project_name $::env(PROJECT_NAME)
 set dx_hdl_dir $::env(DX_HDL_DIR)
-set dx_project_path $::env(DX_PROJECT_PATH)
-set dx_library_path $::env(DX_LIBRARY_PATH)
-set dx_scripts_path $::env(DX_SCRIPTS_PATH)
+set dx_project_path $dx_hdl_dir/project
+set dx_library_path $dx_hdl_dir/library
+set dx_scripts_path $dx_hdl_dir/scripts
 
 source $dx_scripts_path/project/env.tcl
 source $dx_scripts_path/project/project_xilinx.tcl
