@@ -2,7 +2,7 @@
 `define DLY #1
 
 // dx_spi_m4s3, convert master 4 wire spi model to slave 3 wire model.
-// only convert mosi to sdio, convert sdio to miso_m for specific csn signal selected.
+// only convert mosi_m to sdio_s, convert sdio_s to miso_m for specific csn signal selected.
 
 module dx_spi_m4s3 #(
     parameter CSN_NUM = 8,
